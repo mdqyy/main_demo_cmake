@@ -1,0 +1,6 @@
+*.o
+CMakeFiles/*
+build/*
+CMakeCache.txt
+main_demo
+*.mp4
