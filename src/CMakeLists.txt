@@ -24,6 +24,8 @@ SET(ROOT_DIR ../../)
 SET(EXECUTABLE_OUTPUT_PATH ${ROOT_DIR})
 #SET(LIBRARY_OUTPUT_PATH ${ROOT_DIR}/lib)
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR})
+INCLUDE_DIRECTORIES("/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src")
+
 MESSAGE(STATUS "CMAKE_CURRENT_BINARY_DIR " ${CMAKE_CURRENT_BINARY_DIR})
 
 
@@ -36,8 +38,8 @@ MESSAGE(STATUS "CPP: " ${src_main})
 MESSAGE(STATUS "H: " ${h_main})
 
 
+add_subdirectory(ex_code)
 add_subdirectory(object_detector)
-#add_subdirectory(ui)
 
 
 #MESSAGE(STATUS "This is BINARY dir " ${qt_use_cmake_BINARY_DIR})
@@ -48,10 +50,13 @@ add_subdirectory(object_detector)
 #-----------------  set qt files ---------------
 FIND_PACKAGE(Qt REQUIRED)
 INCLUDE(${QT_USE_FILE})
-#ADD_DEFINITIONS(${QT_DEFINITIONS})
 SET(QT_ROOT /usr/share/qt4)
 MESSAGE(STATUS "QT_ROOT" ${QT_ROOT})
+SET(src_forms widget_demo.ui)
+QT4_WRAP_UI(headers_ui ${src_forms})
+QT4_WRAP_CPP(h_moc ${h_main})
 
+#ADD_DEFINITIONS(${QT_DEFINITIONS})
 #MESSAGE("QT_DEF" “${QT_DEFINITIONS}”)
 #set(QT_QMAKE_EXECUTABLE ${QT_ROOT}/bin/qmake)
 #set(QT_MOC_EXECUTABLE ${QT_ROOT}/bin/moc)
@@ -61,13 +66,6 @@ MESSAGE(STATUS "QT_ROOT" ${QT_ROOT})
 #set(QT_LIBRARY_DIR ${QT_ROOT}/lib)
 #set(QT_QTCORE_LIBRARY ${QT_ROOT}/lib)
 
-SET(src_forms widget_demo.ui)
-QT4_WRAP_UI(headers_ui ${src_forms})
-QT4_WRAP_CPP(h_moc ${h_main})
-
-#IF(COMMAND uic)
-MESSAGE("have hehe " ${QT_UIC_EXECUTABLE})
-#endif(COMMAND uic)
 
 
 
@@ -105,4 +103,7 @@ TARGET_LINK_LIBRARIES( ${appname}
         ${opencv_LIBRARIES}
         yl_cuda_code
         yl_object_detector
+        yl_objects_detection_app
+        yl_cpp_stuff_library
+        yl_cuda_stuff_library
         )

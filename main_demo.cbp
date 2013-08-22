@@ -5,7 +5,7 @@
       <Option title="main_demo" />
       <Option makefile_is_custom="1" />
       <Option compiler="gcc" />
-      <Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\object_detector\;CMake Files\src\cuda_code\;" />
+      <Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\ex_code\;CMake Files\src\object_detector\;CMake Files\src\cuda_code\;" />
       <Build>
       <Target title="all">
          <Option working_dir="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake" />
@@ -28,8 +28,8 @@
          </MakeCommands>
       </Target>
       <Target title="main_demo">
-         <Option output="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/main_demo" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src" />
+         <Option output="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/main_demo" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="../../" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
@@ -37,6 +37,7 @@
             <Add option="-DQT_GUI_LIB" />
             <Add option="-DQT_CORE_LIB" />
             <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src" />
             <Add directory="/usr/include/qt4" />
             <Add directory="/usr/include/qt4/QtCore" />
             <Add directory="/usr/include/qt4/QtGui" />
@@ -49,8 +50,8 @@
          </MakeCommands>
       </Target>
       <Target title="main_demo/fast">
-         <Option output="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/main_demo" prefix_auto="0" extension_auto="0" />
-         <Option working_dir="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src" />
+         <Option output="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/main_demo" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="../../" />
          <Option object_output="./" />
          <Option type="1" />
          <Option compiler="gcc" />
@@ -58,6 +59,7 @@
             <Add option="-DQT_GUI_LIB" />
             <Add option="-DQT_CORE_LIB" />
             <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src" />
             <Add directory="/usr/include/qt4" />
             <Add directory="/usr/include/qt4/QtCore" />
             <Add directory="/usr/include/qt4/QtGui" />
@@ -69,6 +71,174 @@
             <DistClean command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
+      <Target title="yl_cpp_stuff_library">
+         <Option output="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/libyl_cpp_stuff_library.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DUSE_GPU" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/libs" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/libs/cudatemplates/include" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src" />
+            <Add directory="/users/visics/rbenenso/no_backup/usr/local/include" />
+            <Add directory="/usr/include/eigen2" />
+            <Add directory="/usr/include/libpng12" />
+            <Add directory="/usr/local/cuda-5.0/include" />
+            <Add directory="/usr/local/cuda/include" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/include/eigen2" />
+            <Add directory="/usr/local/include/opencv" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 yl_cpp_stuff_library" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="yl_cpp_stuff_library/fast">
+         <Option output="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/libyl_cpp_stuff_library.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DUSE_GPU" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/libs" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/libs/cudatemplates/include" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src" />
+            <Add directory="/users/visics/rbenenso/no_backup/usr/local/include" />
+            <Add directory="/usr/include/eigen2" />
+            <Add directory="/usr/include/libpng12" />
+            <Add directory="/usr/local/cuda-5.0/include" />
+            <Add directory="/usr/local/cuda/include" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/include/eigen2" />
+            <Add directory="/usr/local/include/opencv" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 yl_cpp_stuff_library/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="yl_cuda_stuff_library">
+         <Option output="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/libyl_cuda_stuff_library.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DUSE_GPU" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/libs" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/libs/cudatemplates/include" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src" />
+            <Add directory="/users/visics/rbenenso/no_backup/usr/local/include" />
+            <Add directory="/usr/include/eigen2" />
+            <Add directory="/usr/include/libpng12" />
+            <Add directory="/usr/local/cuda-5.0/include" />
+            <Add directory="/usr/local/cuda/include" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/include/eigen2" />
+            <Add directory="/usr/local/include/opencv" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 yl_cuda_stuff_library" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="yl_cuda_stuff_library/fast">
+         <Option output="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/libyl_cuda_stuff_library.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DUSE_GPU" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/libs" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/libs/cudatemplates/include" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src" />
+            <Add directory="/users/visics/rbenenso/no_backup/usr/local/include" />
+            <Add directory="/usr/include/eigen2" />
+            <Add directory="/usr/include/libpng12" />
+            <Add directory="/usr/local/cuda-5.0/include" />
+            <Add directory="/usr/local/cuda/include" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/include/eigen2" />
+            <Add directory="/usr/local/include/opencv" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 yl_cuda_stuff_library/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="yl_objects_detection_app">
+         <Option output="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/libyl_objects_detection_app.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DUSE_GPU" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/libs" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/libs/cudatemplates/include" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src" />
+            <Add directory="/users/visics/rbenenso/no_backup/usr/local/include" />
+            <Add directory="/usr/include/eigen2" />
+            <Add directory="/usr/include/libpng12" />
+            <Add directory="/usr/local/cuda-5.0/include" />
+            <Add directory="/usr/local/cuda/include" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/include/eigen2" />
+            <Add directory="/usr/local/include/opencv" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 yl_objects_detection_app" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="yl_objects_detection_app/fast">
+         <Option output="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/libyl_objects_detection_app.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DUSE_GPU" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/libs" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/libs/cudatemplates/include" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src" />
+            <Add directory="/users/visics/rbenenso/no_backup/usr/local/include" />
+            <Add directory="/usr/include/eigen2" />
+            <Add directory="/usr/include/libpng12" />
+            <Add directory="/usr/local/cuda-5.0/include" />
+            <Add directory="/usr/local/cuda/include" />
+            <Add directory="/usr/local/include" />
+            <Add directory="/usr/local/include/eigen2" />
+            <Add directory="/usr/local/include/opencv" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 yl_objects_detection_app/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/ex_code/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
       <Target title="yl_object_detector">
          <Option output="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/object_detector/libyl_object_detector.a" prefix_auto="0" extension_auto="0" />
          <Option working_dir="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/object_detector" />
@@ -77,6 +247,7 @@
          <Option compiler="gcc" />
          <Compiler>
             <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src" />
          </Compiler>
          <MakeCommands>
             <Build command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/object_detector/Makefile&quot;  VERBOSE=1 yl_object_detector" />
@@ -93,6 +264,7 @@
          <Option compiler="gcc" />
          <Compiler>
             <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src" />
          </Compiler>
          <MakeCommands>
             <Build command="/usr/bin/make -f &quot;/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src/object_detector/Makefile&quot;  VERBOSE=1 yl_object_detector/fast" />
@@ -111,6 +283,7 @@
             <Add option="-DQT_GUI_LIB" />
             <Add option="-DQT_CORE_LIB" />
             <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src" />
             <Add directory="/usr/include/qt4" />
             <Add directory="/usr/include/qt4/QtCore" />
             <Add directory="/usr/include/qt4/QtGui" />
@@ -133,6 +306,7 @@
             <Add option="-DQT_GUI_LIB" />
             <Add option="-DQT_CORE_LIB" />
             <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/build/src" />
+            <Add directory="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src" />
             <Add directory="/usr/include/qt4" />
             <Add directory="/usr/include/qt4/QtCore" />
             <Add directory="/usr/include/qt4/QtGui" />
@@ -146,6 +320,264 @@
          </MakeCommands>
       </Target>
       </Build>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/applications/AbstractApplication.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/applications/AbstractGui.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/applications/BaseApplication.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/applications/BaseSdlGui.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/applications/EmptyGui.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/applications/stixel_world/StixelWorldGui.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/applications/stixel_world/draw_stixel_world.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/drawing/gil/colors.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/drawing/gil/draw_ground_line.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/drawing/gil/draw_horizon_line.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/drawing/gil/draw_matrix.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/drawing/gil/hsv_to_rgb.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/drawing/gil/line.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/AlignedImage.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/Log.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/any_to_string.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/data/DataSequence.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/data/DataSequenceHeader.pb.cc">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/get_section_options.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/gpu/TextureBinder.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/gpu/cuda_safe_call.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/loggers.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/objects_detection/create_json_for_mustache.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/replace_environment_variables.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/image_processing/AbstractLinesDetector.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/image_processing/IrlsLinesDetector.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/image_processing/OpenCvLinesDetector.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/image_processing/ResidualImageFilter.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/image_processing/fast_rgb_to_luv.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/image_processing/integrate.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/AbstractModelWindowToObjectWindowConverter.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/AbstractObjectsDetector.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/BaseFastestPedestrianDetectorInTheWest.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/BaseIntegralChannelsDetector.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/BaseMultiscalesIntegralChannelsDetector.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/BaseObjectsDetectorWithNonMaximalSuppression.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/BaseVeryFastIntegralChannelsDetector.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/Detection2d.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/DetectorSearchRange.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/FastModelWindowToObjectWindowConverter.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/FastestPedestrianDetectorInTheWest.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/FastestPedestrianDetectorInTheWestV2.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/GpuFastestPedestrianDetectorInTheWest.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/GpuIntegralChannelsDetector.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/GpuMultiscalesIntegralChannelsDetector.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/GpuVeryFastIntegralChannelsDetector.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/IntegralChannelsDetector.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/IntegralChannelsLinearSvmSlidingWindow.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/LinearSvmModel.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/ModelWindowToObjectWindowConverter.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/ModelWindowToObjectWindowConverterFactory.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/MultiScalesIntegralChannelsModel.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/MultiscalesIntegralChannelsDetector.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/ObjectsDetectorFactory.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/SlidingIntegralFeature.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/SoftCascadeOverIntegralChannelsFastFractionalStage.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/SoftCascadeOverIntegralChannelsFastStage.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/SoftCascadeOverIntegralChannelsModel.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/SoftCascadeOverIntegralChannelsStage.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/VeryFastIntegralChannelsDetector.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/detections.pb.cc">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/detector_model.pb.cc">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/integral_channels/GpuIntegralChannelsForPedestrians.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/integral_channels/IntegralChannelsForPedestrians.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/non_maximal_suppression/AbstractNonMaximalSuppression.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/non_maximal_suppression/FixedWindowNonMaximalSuppression.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/non_maximal_suppression/GreedyNonMaximalSuppression.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/non_maximal_suppression/NonMaximalSuppressionFactory.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/non_maximal_suppression/StixelsWeightingAndNonMaximalSuppression.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection_app/ObjectsDetectionApplication.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection_app/ObjectsDetectionGui.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection_app/draw_the_detections.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection_app/objects_detection.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_tracking/AbstractObjectsTracker.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_tracking/DummyObjectsTracker.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_tracking/ObjectsTrackerFactory.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_tracking/TrackedDetection2d.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/AbstractStereoBlockMatcher.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/AbstractStereoMatcher.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/ConstantSpaceBeliefPropagation.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/OpenCvStereo.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/SimpleBlockMatcher.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/cost_functions.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/cost_volume/AbstractDisparityCostVolumeEstimator.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/cost_volume/CostVolume.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/cost_volume/DisparityCostVolume.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/cost_volume/DisparityCostVolumeEstimator.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/cost_volume/DisparityCostVolumeEstimatorFactory.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/cost_volume/DisparityCostVolumeFromDepthMap.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/cost_volume/FastDisparityCostVolumeEstimator.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/ground_plane/AbstractGroundPlaneEstimator.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/ground_plane/BaseGroundPlaneEstimator.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/ground_plane/FastGroundPlaneEstimator.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/ground_plane/GroundPlane.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/ground_plane/GroundPlaneEstimator.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/ground_plane/GroundPlaneMovingAverage.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/qingxiong_yang/qx_basic.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/qingxiong_yang/qx_csbp.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/qingxiong_yang/qx_hbp.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/qingxiong_yang/qx_post_processing.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/qingxiong_yang/qx_stereo_corr_vol_cpu.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/AbstractStixelWorldEstimator.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/AbstractStixelsEstimator.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/BaseStixelsEstimator.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/FastStixelWorldEstimator.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/FastStixelsEstimator.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/FastStixelsEstimatorWithHeightEstimation.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/ImagePlaneStixelsEstimator.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/Stixel.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/StixelWorldEstimator.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/StixelWorldEstimatorFactory.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/StixelsEstimator.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/StixelsEstimatorWith3dCost.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/StixelsEstimatorWithHeightEstimation.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/AbstractVideoInput.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/ImagesFromDirectory.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/MetricCamera.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/MetricStereoCamera.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/VideoFromFiles.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/VideoInputFactory.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/calibration/CameraCalibration.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/calibration/Pose.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/calibration/StereoCameraCalibration.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/calibration/calibration.pb.cc">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/preprocessing/AbstractPreprocessor.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/preprocessing/AddBorderFunctor.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/preprocessing/CpuPreprocessor.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/preprocessing/FastReverseMapper.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/preprocessing/ReverseMapper.cpp">
+      </Unit>
       <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/main.cpp">
       </Unit>
       <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/object_detector/traffic_sign_detector.cpp">
@@ -153,6 +585,264 @@
       <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/widget_demo.cpp">
       </Unit>
       <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/cuda_code/cuda_interface.cu">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/applications/AbstractApplication.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/applications/AbstractGui.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/applications/BaseApplication.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/applications/BaseSdlGui.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/applications/EmptyGui.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/applications/stixel_world/StixelWorldGui.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/applications/stixel_world/draw_stixel_world.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/drawing/gil/colors.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/drawing/gil/draw_ground_line.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/drawing/gil/draw_horizon_line.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/drawing/gil/draw_matrix.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/drawing/gil/hsv_to_rgb.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/drawing/gil/line.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/AlignedImage.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/Log.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/any_to_string.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/data/DataSequence.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/get_section_options.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/gpu/TextureBinder.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/gpu/cuda_safe_call.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/loggers.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/objects_detection/create_json_for_mustache.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/helpers/replace_environment_variables.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/image_processing/AbstractLinesDetector.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/image_processing/IrlsLinesDetector.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/image_processing/OpenCvLinesDetector.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/image_processing/ResidualImageFilter.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/image_processing/fast_rgb_to_luv.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/image_processing/integrate.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/AbstractModelWindowToObjectWindowConverter.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/AbstractObjectsDetector.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/BaseFastestPedestrianDetectorInTheWest.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/BaseIntegralChannelsDetector.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/BaseMultiscalesIntegralChannelsDetector.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/BaseObjectsDetectorWithNonMaximalSuppression.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/BaseVeryFastIntegralChannelsDetector.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/Detection2d.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/DetectorSearchRange.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/FastModelWindowToObjectWindowConverter.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/FastestPedestrianDetectorInTheWest.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/FastestPedestrianDetectorInTheWestV2.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/GpuFastestPedestrianDetectorInTheWest.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/GpuIntegralChannelsDetector.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/GpuMultiscalesIntegralChannelsDetector.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/GpuVeryFastIntegralChannelsDetector.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/IntegralChannelsDetector.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/IntegralChannelsLinearSvmSlidingWindow.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/LinearSvmModel.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/ModelWindowToObjectWindowConverter.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/ModelWindowToObjectWindowConverterFactory.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/MultiScalesIntegralChannelsModel.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/MultiscalesIntegralChannelsDetector.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/ObjectsDetectorFactory.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/SlidingIntegralFeature.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/SoftCascadeOverIntegralChannelsFastFractionalStage.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/SoftCascadeOverIntegralChannelsFastStage.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/SoftCascadeOverIntegralChannelsModel.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/SoftCascadeOverIntegralChannelsStage.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/VeryFastIntegralChannelsDetector.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/gpu/add_detection.cu">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/gpu/get_feature_value_tex2d.cu">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/gpu/integral_channels_detector.cu">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/integral_channels/GpuIntegralChannelsForPedestrians.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/integral_channels/IntegralChannelsForPedestrians.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/integral_channels/gpu/integral_channels.cu">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/integral_channels/gpu/shrinking.cu">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/non_maximal_suppression/AbstractNonMaximalSuppression.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/non_maximal_suppression/FixedWindowNonMaximalSuppression.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/non_maximal_suppression/GreedyNonMaximalSuppression.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/non_maximal_suppression/NonMaximalSuppressionFactory.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection/non_maximal_suppression/StixelsWeightingAndNonMaximalSuppression.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection_app/ObjectsDetectionApplication.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection_app/ObjectsDetectionGui.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection_app/draw_the_detections.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_tracking/AbstractObjectsTracker.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_tracking/DummyObjectsTracker.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_tracking/ObjectsTrackerFactory.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_tracking/TrackedDetection2d.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/AbstractStereoBlockMatcher.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/AbstractStereoMatcher.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/ConstantSpaceBeliefPropagation.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/OpenCvStereo.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/SimpleBlockMatcher.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/cost_functions.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/cost_volume/AbstractDisparityCostVolumeEstimator.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/cost_volume/CostVolume.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/cost_volume/DisparityCostVolume.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/cost_volume/DisparityCostVolumeEstimator.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/cost_volume/DisparityCostVolumeEstimatorFactory.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/cost_volume/DisparityCostVolumeFromDepthMap.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/cost_volume/FastDisparityCostVolumeEstimator.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/ground_plane/AbstractGroundPlaneEstimator.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/ground_plane/BaseGroundPlaneEstimator.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/ground_plane/FastGroundPlaneEstimator.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/ground_plane/GroundPlane.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/ground_plane/GroundPlaneEstimator.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/ground_plane/GroundPlaneMovingAverage.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/qingxiong_yang/qx_basic.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/qingxiong_yang/qx_csbp.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/qingxiong_yang/qx_hbp.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/qingxiong_yang/qx_post_processing.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/qingxiong_yang/qx_stereo_corr_vol_cpu.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/AbstractStixelWorldEstimator.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/AbstractStixelsEstimator.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/BaseStixelsEstimator.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/FastStixelWorldEstimator.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/FastStixelsEstimator.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/FastStixelsEstimatorWithHeightEstimation.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/ImagePlaneStixelsEstimator.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/Stixel.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/StixelWorldEstimator.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/StixelWorldEstimatorFactory.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/StixelsEstimator.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/StixelsEstimatorWith3dCost.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/stereo_matching/stixels/StixelsEstimatorWithHeightEstimation.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/AbstractVideoInput.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/ImagesFromDirectory.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/MetricCamera.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/MetricStereoCamera.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/VideoFromFiles.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/VideoInputFactory.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/calibration/CameraCalibration.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/calibration/Pose.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/calibration/StereoCameraCalibration.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/preprocessing/AbstractPreprocessor.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/preprocessing/AddBorderFunctor.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/preprocessing/CpuPreprocessor.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/preprocessing/FastReverseMapper.hpp">
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/video_input/preprocessing/ReverseMapper.hpp">
       </Unit>
       <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/object_detector/traffic_sign_detector.h">
       </Unit>
@@ -165,6 +855,18 @@
       </Unit>
       <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/CMakeLists.txt">
           <Option virtualFolder="CMake Files\src\" />
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\ex_code\" />
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/common_settings.cmake">
+          <Option virtualFolder="CMake Files\src\ex_code\" />
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\ex_code\" />
+      </Unit>
+      <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/common_settings.cmake">
+          <Option virtualFolder="CMake Files\src\ex_code\" />
       </Unit>
       <Unit filename="/home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/object_detector/CMakeLists.txt">
           <Option virtualFolder="CMake Files\src\object_detector\" />

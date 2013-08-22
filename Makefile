@@ -112,6 +112,45 @@ main_demo/fast:
 .PHONY : main_demo/fast
 
 #=============================================================================
+# Target rules for targets named yl_cpp_stuff_library
+
+# Build rule for target.
+yl_cpp_stuff_library: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 yl_cpp_stuff_library
+.PHONY : yl_cpp_stuff_library
+
+# fast build rule for target.
+yl_cpp_stuff_library/fast:
+	$(MAKE) -f build/src/ex_code/CMakeFiles/yl_cpp_stuff_library.dir/build.make build/src/ex_code/CMakeFiles/yl_cpp_stuff_library.dir/build
+.PHONY : yl_cpp_stuff_library/fast
+
+#=============================================================================
+# Target rules for targets named yl_cuda_stuff_library
+
+# Build rule for target.
+yl_cuda_stuff_library: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 yl_cuda_stuff_library
+.PHONY : yl_cuda_stuff_library
+
+# fast build rule for target.
+yl_cuda_stuff_library/fast:
+	$(MAKE) -f build/src/ex_code/CMakeFiles/yl_cuda_stuff_library.dir/build.make build/src/ex_code/CMakeFiles/yl_cuda_stuff_library.dir/build
+.PHONY : yl_cuda_stuff_library/fast
+
+#=============================================================================
+# Target rules for targets named yl_objects_detection_app
+
+# Build rule for target.
+yl_objects_detection_app: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 yl_objects_detection_app
+.PHONY : yl_objects_detection_app
+
+# fast build rule for target.
+yl_objects_detection_app/fast:
+	$(MAKE) -f build/src/ex_code/CMakeFiles/yl_objects_detection_app.dir/build.make build/src/ex_code/CMakeFiles/yl_objects_detection_app.dir/build
+.PHONY : yl_objects_detection_app/fast
+
+#=============================================================================
 # Target rules for targets named yl_object_detector
 
 # Build rule for target.
@@ -146,6 +185,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main_demo"
+	@echo "... yl_cpp_stuff_library"
+	@echo "... yl_cuda_stuff_library"
+	@echo "... yl_objects_detection_app"
 	@echo "... yl_object_detector"
 	@echo "... yl_cuda_code"
 .PHONY : help

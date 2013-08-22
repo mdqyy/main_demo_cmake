@@ -1,0 +1,1 @@
+/home/yerrick/rodrigo-code-2/src/applications/ground_estimation/CMakeFiles/ground_estimation.dir

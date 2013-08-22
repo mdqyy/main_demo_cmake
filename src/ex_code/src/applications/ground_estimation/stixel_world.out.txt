@@ -1,0 +1,12 @@
+2013-08-07 15:08:15 {0x2018e50} [ StereoCameraCalibration ] : stereo_calibration_data name: Andreas Ess Bahnhofstrasse sequence stereo calibration
+2013-08-07 15:08:15 {0x2018e50} [ CpuPreprocessor ] : v1 == 0.998839
+0.00680083
+0.0476891
+2013-08-07 15:08:15 {0x2018e50} [ CpuPreprocessor ] : R1 set with v1, v2, v3 ==    0.998839  0.00680083   0.0476891
+-0.00692929    0.999973  0.00252876
+ -0.0476706 -0.00285627    0.998859
+2013-08-07 15:08:15 {0x2018e50} [ CpuPreprocessor ] : Final x_offset_left after centering == -28
+2013-08-07 15:08:15 {0x2018e50} [ CpuPreprocessor ] : Final x_offset_right after centering == -34
+2013-08-07 15:08:15 {0x2018e50} [ BaseGroundPlaneEstimator ] : left camera focal length x,y == 500.745, 500.323
+2013-08-07 15:08:15 {0x2018e50} [ BaseGroundPlaneEstimator ] : right camera focal length x,y == 500.745, 500.323
+2013-08-07 15:08:15 {0x2018e50} [ BaseApplication ] : Entering into main_loop

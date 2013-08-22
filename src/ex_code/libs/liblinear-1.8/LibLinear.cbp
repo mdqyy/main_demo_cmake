@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="LibLinear" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\libs\;CMake Files\..\..\..\libs\liblinear-1.8\;CMake Files\..\bootstrapping_lib\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="blas">
+         <Option output="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/libblas.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DUSE_GPU" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 blas" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="blas/fast">
+         <Option output="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/libblas.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DUSE_GPU" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 blas/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="linear">
+         <Option output="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/liblinear.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DUSE_GPU" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 linear" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="linear/fast">
+         <Option output="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/liblinear.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DUSE_GPU" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 linear/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="predict">
+         <Option output="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/predict" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DUSE_GPU" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 predict" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="predict/fast">
+         <Option output="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/predict" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DUSE_GPU" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 predict/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="train">
+         <Option output="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/train" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DUSE_GPU" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 train" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="train/fast">
+         <Option output="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/train" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DUSE_GPU" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 train/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/blas/daxpy.c">
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/blas/ddot.c">
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/blas/dnrm2.c">
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/blas/dscal.c">
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/linear.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/predict.c">
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/train.c">
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/tron.cpp">
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/linear.h">
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/libs/liblinear-1.8/tron.h">
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/src/applications/boosted_learning/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/src/applications/boosted_learning/../../../common_settings.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\" />
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/src/applications/boosted_learning/../../../common_settings.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\" />
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/src/applications/boosted_learning/../../../common_settings.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\" />
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/src/applications/boosted_learning/../../../common_settings.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\" />
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/src/applications/boosted_learning/../../../common_settings.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\" />
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/src/applications/boosted_learning/../../../libs/liblinear-1.8/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\..\..\..\libs\liblinear-1.8\" />
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/src/applications/boosted_learning/../../../libs/liblinear-1.8/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\..\..\..\libs\liblinear-1.8\" />
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/src/applications/boosted_learning/../bootstrapping_lib/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\..\bootstrapping_lib\" />
+      </Unit>
+      <Unit filename="/home/yerrick/rodrigo-code-2/src/applications/boosted_learning/../bootstrapping_lib/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\..\bootstrapping_lib\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>
