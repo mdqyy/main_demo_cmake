@@ -4,3 +4,5 @@ build/*
 CMakeCache.txt
 main_demo
 *.mp4
+.fuse*
+
