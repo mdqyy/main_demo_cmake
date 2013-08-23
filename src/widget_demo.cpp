@@ -209,7 +209,7 @@ void WidgetDemo::drawDetectResults(const cv::Mat &input_image, const doppia::Abs
 
 
 
-    // show original + traffic signs detected
+    // show original image with traffic signs detected
     QImage show2 = img;
     QPixmap temp2;
     QPainter tpainter(&show2);
@@ -237,7 +237,8 @@ void WidgetDemo::drawDetectResults(const cv::Mat &input_image, const doppia::Abs
         box.max_corner().y(box.max_corner().y() - additional_border);
 
 
-
+        tpen.setColor(QColor(normalized_score,0,0));
+        tpainter.setPen(tpen);
         tpainter.drawRect(box.min_corner().x(),
                           box.min_corner().y(),
                           box.max_corner().x() - box.min_corner().x(),
@@ -252,19 +253,6 @@ void WidgetDemo::drawDetectResults(const cv::Mat &input_image, const doppia::Abs
     QImage show3 = show2.scaled(ui->labelAfterProcess->width(),ui->labelAfterProcess->height(),Qt::KeepAspectRatio,Qt::FastTransformation);
     temp2.convertFromImage(show3);
     ui->labelAfterProcess->setPixmap(temp2);
-
-
-
-
-
-
-    // draw ground truth
-    //    for(size_t i=0; i < ground_truth_detections.size(); i+=1)
-    //    {
-    //        boost::gil::rgb8c_pixel_t color = rgb8_colors::white;
-    //        const detection_t::rectangle_t &box = ground_truth_detections[i].bounding_box;
-    //        draw_rectangle(view, color, box, 2);
-    //    }
 
     return;
 }
@@ -308,10 +296,14 @@ void WidgetDemo::listRecogniseResults(const Mat &input_image, const std::vector<
 
 void WidgetDemo::listRecogniseResults(const Mat &input_image, const doppia::AbstractObjectsDetector::detections_t &detections)
 {
+    // clear the list widget
     ui->listFromImage->clear();
 
-    LOG(cout<<"is listing"<<endl;)
-            Mat timage;
+    // resize icon size
+    ui->listFromImage->setIconSize(QSize(ui->listFromImage->size().width()-10,ui->listFromImage->size().width()-10));
+
+    LOG(cout<<"is listing"<<endl);
+    Mat timage;
     switch(input_image.channels())
     {
     case 1:
@@ -328,8 +320,7 @@ void WidgetDemo::listRecogniseResults(const Mat &input_image, const doppia::Abst
     QImage img = QImage(input_image.data,input_image.cols,input_image.rows,QImage::Format_RGB888);
 
 
-    LOG(cout<<"before cut image"<<endl);
-
+    LOG(cout<<"is going to cut image"<<endl);
     typedef doppia::AbstractObjectsDetector::detection_t detection_type;
     int i=-1;
     BOOST_FOREACH(const detection_type &detection, detections)
@@ -340,8 +331,14 @@ void WidgetDemo::listRecogniseResults(const Mat &input_image, const doppia::Abst
                               box.min_corner().y(),
                               box.max_corner().x() - box.min_corner().x(),
                               box.max_corner().y() - box.min_corner().y());
+
+        roi = roi.scaled(ui->listFromImage->size().width(),ui->listFromImage->size().width());
+
         QPixmap pix;
         pix.convertFromImage(roi);
+
+
+
         QIcon icon(pix);
         QListWidgetItem *item = new QListWidgetItem(icon,QString::number(i));
         ui->listFromImage->addItem(item);
