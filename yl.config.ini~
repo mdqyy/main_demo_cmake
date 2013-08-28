@@ -24,9 +24,9 @@ use_stixels = false
 save_detections = false
 log = none
 
-gui.disabled = false
+gui.disabled = true
 
-process_folder = /home/yerrick/rodrigo-code-2/data/train_1st/neg/
+process_folder = /home/yerrick/rodrigo-code-2/data/train_1st/test/
 
 # border added the input images from the process_folder, in pixels
 additional_border = 0
@@ -40,11 +40,13 @@ additional_border = 0
 method = gpu_fpdw
 #method = gpu_cvpr2012
 
-model = /home/yerrick/shared_Development/TrafficSign/program/main_demo_cmake/src/ex_code/src/objects_detection_app/2013_08_13_68155__trained_model.proto.bin.bootstrap2
 
-score_threshold = 0.0
+#model = ./2013_08_13_68155__trained_model.proto.bin.bootstrap2
+model = ./2013_08_27_79634__trained_model.proto.bin.bootstrap2
 
-cascade_threshold_additive_offset = 0.05
+score_threshold = -1
+
+cascade_threshold_additive_offset = 0.0
 
 ignore_soft_cascade = false
 
@@ -55,11 +57,11 @@ non_maximal_suppression_method = greedy
 # for a nominal height of 96 pixels, this is equivalent to a scale between 0.41 and 5
 # changing scales with a multiplicative factor of 1.05, 0.4 to 5 takes 52 steps 
 min_scale = 0.4
-max_scale = 5
+max_scale = 4
 
 #num_scales = 3
 #num_scales = 10
-num_scales = 55
+num_scales = 20
 
 #min_scale = 1
 #max_scale = 2

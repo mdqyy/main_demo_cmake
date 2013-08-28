@@ -597,7 +597,7 @@ void ObjectsDetectionApplication::one_step()
     objects_detector_p->compute();
     cumulated_objects_detector_compute_time += omp_get_wtime() - start_objects_detector_compute_wall_time;
 
-    cumulated_processing_time = omp_get_wtime() - start_processing_wall_time;
+//    cumulated_processing_time = omp_get_wtime() - start_processing_wall_time;
     //        cumulated_processing_time += omp_get_wtime() - start_processing_wall_time;
 
     //        if(should_save_detections)
@@ -671,6 +671,8 @@ cv::Mat ObjectsDetectionApplication::get_image()
             boost::gil::opencv::create_ipl_image(input_view);
 
     cv::Mat output_mat(input_ipl.get());
+    cv::resize(output_mat,output_mat,cv::Size(IMG_WIDTH,IMG_HEIGHT));
+
 
     return output_mat;
 }

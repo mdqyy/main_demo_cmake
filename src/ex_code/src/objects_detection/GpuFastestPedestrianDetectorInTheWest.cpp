@@ -34,6 +34,7 @@ std::ostream & log_error()
     return  logging::log(logging::ErrorMessage, "GpuIntegralChannelsDetector");
 }
 
+
 } // end of anonymous namespace
 
 namespace doppia {
@@ -75,55 +76,63 @@ void GpuFastestPedestrianDetectorInTheWest::set_image(const boost::gil::rgb8c_vi
             ((input_gpu_mat.cols != input_view.width())
              or (input_gpu_mat.rows != input_view.height()));
 
+    cv::Mat output_mat;
+
     // transfer image into GPU --
+    boost::gil::opencv::ipl_image_wrapper input_ipl =
+            boost::gil::opencv::create_ipl_image(input_view);
+
+    cv::Mat input_mat(input_ipl.get());
+//    input_mat.copyTo(output_mat);
+    cv::resize(input_mat,output_mat,cv::Size(IMG_WIDTH,IMG_HEIGHT));
+
+    //        std::cout<<"###########resize#############"<<std::endl;
+
+    //printf("input_ipl.get()->nChannels == %i\n", input_ipl.get()->nChannels);
+    //printf("input_mat.type() == %i =?= %i\n", input_mat.type(), CV_8UC3);
+    //printf("input_mat.channels() == %i\n", input_mat.channels());
+    //printf("input_mat (height, width) == (%i, %i)\n", input_mat.rows, input_mat.cols);
+
+    const bool use_cuda_write_combined = true;
+    if(use_cuda_write_combined)
     {
-        boost::gil::opencv::ipl_image_wrapper input_ipl =
-                boost::gil::opencv::create_ipl_image(input_view);
-
-        cv::Mat input_mat(input_ipl.get());
-
-        //printf("input_ipl.get()->nChannels == %i\n", input_ipl.get()->nChannels);
-        //printf("input_mat.type() == %i =?= %i\n", input_mat.type(), CV_8UC3);
-        //printf("input_mat.channels() == %i\n", input_mat.channels());
-        //printf("input_mat (height, width) == (%i, %i)\n", input_mat.rows, input_mat.cols);
-
-        const bool use_cuda_write_combined = true;
-        if(use_cuda_write_combined)
+        if((input_rgb8_gpu_mem.rows != output_mat.rows) or (input_rgb8_gpu_mem.cols != output_mat.cols))
         {
-            if((input_rgb8_gpu_mem.rows != input_mat.rows) or (input_rgb8_gpu_mem.cols != input_mat.cols))
-            {
-                // lazy allocate the cuda memory
-                // using WRITE_COMBINED, in theory allows for 40% speed-up in the upload,
-                // (but reading this memory from host will be _very slow_)
-                // tests on the laptop show no speed improvement (maybe faster on desktop ?)
-                input_rgb8_gpu_mem.create(input_mat.size(), input_mat.type(), cv::gpu::CudaMem::ALLOC_WRITE_COMBINED);
-                input_rgb8_gpu_mem_mat = input_rgb8_gpu_mem.createMatHeader();
-            }
-
-            input_mat.copyTo(input_rgb8_gpu_mem_mat); // copy to write_combined host memory
-            input_rgb8_gpu_mat.upload(input_rgb8_gpu_mem_mat);  // fast transfer from CPU to GPU
-        }
-        else
-        {
-            input_rgb8_gpu_mat.upload(input_mat);  // from CPU to GPU
+            // lazy allocate the cuda memory
+            // using WRITE_COMBINED, in theory allows for 40% speed-up in the upload,
+            // (but reading this memory from host will be _very slow_)
+            // tests on the laptop show no speed improvement (maybe faster on desktop ?)
+            input_rgb8_gpu_mem.create(output_mat.size(), output_mat.type(), cv::gpu::CudaMem::ALLOC_WRITE_COMBINED);
+            input_rgb8_gpu_mem_mat = input_rgb8_gpu_mem.createMatHeader();
         }
 
-        //printf("input_rgb8_gpu_mat.channels() == %i\n", input_rgb8_gpu_mat.channels());
-
-        // most tasks in GPU are optimized for CV_8UC1 and CV_8UC4, so we set the input as such
-        cv::gpu::cvtColor(input_rgb8_gpu_mat, input_gpu_mat, CV_RGB2RGBA); // GPU type conversion
-
-        if(input_gpu_mat.type() != CV_8UC4)
-        {
-            throw std::runtime_error("cv::gpu::cvtColor did not work as expected");
-        }
+        output_mat.copyTo(input_rgb8_gpu_mem_mat); // copy to write_combined host memory
+        input_rgb8_gpu_mat.upload(input_rgb8_gpu_mem_mat);  // fast transfer from CPU to GPU
     }
+    else
+    {
+        input_rgb8_gpu_mat.upload(output_mat);  // from CPU to GPU
+    }
+
+    //printf("input_rgb8_gpu_mat.channels() == %i\n", input_rgb8_gpu_mat.channels());
+
+    // most tasks in GPU are optimized for CV_8UC1 and CV_8UC4, so we set the input as such
+    cv::gpu::cvtColor(input_rgb8_gpu_mat, input_gpu_mat, CV_RGB2RGBA); // GPU type conversion
+
+    if(input_gpu_mat.type() != CV_8UC4)
+    {
+        throw std::runtime_error("cv::gpu::cvtColor did not work as expected");
+    }
+
+
+
+
+
 
     // set default search range --
     if(input_dimensions_changed or search_ranges.empty())
     {
-
-        compute_search_ranges(input_view.dimensions(),
+        compute_search_ranges(boost::gil::rgb8c_view_t::point_t(output_mat.cols, output_mat.rows),
                               scale_one_detection_window_size,
                               search_ranges);
 
@@ -132,10 +141,24 @@ void GpuFastestPedestrianDetectorInTheWest::set_image(const boost::gil::rgb8c_vi
         set_gpu_scale_detection_cascades();
 
         // update additional, input size dependent, data
-        compute_extra_data_per_scale(input_view.width(), input_view.height());
+        compute_extra_data_per_scale(output_mat.cols, output_mat.rows);
 
         // resize helper array
         resized_input_gpu_matrices.resize(search_ranges.size());
+
+        //        compute_search_ranges(input_view.dimensions(),
+        //                              scale_one_detection_window_size,
+        //                              search_ranges);
+
+        //        // update the detection cascades
+        //        compute_scaled_detection_cascades();
+        //        set_gpu_scale_detection_cascades();
+
+        //        // update additional, input size dependent, data
+        //        compute_extra_data_per_scale(input_view.width(), input_view.height());
+
+        //        // resize helper array
+        //        resized_input_gpu_matrices.resize(search_ranges.size());
     } // end of "set default search range"
 
     return;
@@ -212,7 +235,7 @@ void GpuFastestPedestrianDetectorInTheWest::set_gpu_scale_fractional_detection_c
 
 void GpuFastestPedestrianDetectorInTheWest::compute()
 {
-//    std::cout<<"####################################"<<std::endl;
+    //    std::cout<<"####################################"<<std::endl;
 
     detections.clear();
     num_gpu_detections = 0; // no need to clean the buffer
@@ -276,7 +299,7 @@ void GpuFastestPedestrianDetectorInTheWest::compute_detections_at_specific_scale
         const size_t search_range_index,
         const bool first_call)
 {
-//    std::cout<<"__________________________________"<<std::endl;
+    //    std::cout<<"__________________________________"<<std::endl;
 
     if(use_fractional_features == false)
     {

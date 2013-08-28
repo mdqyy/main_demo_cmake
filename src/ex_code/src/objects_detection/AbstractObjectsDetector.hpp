@@ -15,6 +15,9 @@
 
 #include <vector>
 
+#define IMG_WIDTH 680
+#define IMG_HEIGHT 400
+
 namespace doppia {
 
 class AbstractObjectsDetector

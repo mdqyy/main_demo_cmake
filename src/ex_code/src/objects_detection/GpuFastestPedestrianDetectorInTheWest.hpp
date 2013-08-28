@@ -4,6 +4,8 @@
 #include "GpuIntegralChannelsDetector.hpp"
 #include "BaseFastestPedestrianDetectorInTheWest.hpp"
 
+
+
 namespace doppia {
 
 /// This is is the GPU version of FastestPedestrianDetectorInTheWestV2,
